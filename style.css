@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+h1{
+  color: #658cee;
+  font-size: 10pt;
+  font-family: "Comic Sans MS";
+}
+
+canvas { 
+  border: 1px solid black;
+
+ }
