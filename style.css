@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+h1{
+  color: #24226c;
+  font-size: 20pt;
+  font: small-caps bold 24px/1 sans-serif;
+}
+h2{
+  color: #24226c;
+  font-size: 35pt;
+}
+
+canvas {
+  border: 0px solid black;
+
+}
+
+.theta_K_size{
+ color: #24226c;
+  font-size: 30pt;
+}
+
+.in{
+border:0;
+padding:8px;
+font-size:0.6em;
+font-family:Arial, sans-serif;
+color:#95ade9;
+border:solid 1px #87bef0;
+margin:0 0 20px;
+width:100px;
+
+}
+
+.buto{
+border:solid 1px #ffffff;
+padding:8px 20px;
+margin:0 0 20px;
+font-family:Arial, sans-serif;
+font-size:0.9em;
+text-transform:uppercase;
+font-weight:bold;
+color:#0a376c;
+cursor:pointer;
+}

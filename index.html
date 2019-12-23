@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Servomotor</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" }},
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+        "HTML-CSS": { matchFontHeight: false },
+        displayAlign: "left",
+        displayIndent: "2em"
+    });
+    </script>
+  </head>
+
+
+  <body>
+    <h1>Servomotor</h1>
+
+    <h2 style="position:absolute; left:5%; top:8%">$I\frac{d^2\theta}{dt^2} = M - c \frac{d\theta}{dt} \\ M = (\theta_0-\theta)KJ$</h2>
+
+    <div class="theta_K_size" style="position:absolute; left:40pt; top:50%">
+
+      <span> $\theta_0$  </span>
+      <input type="number" style="position:absolute; left:40pt; " id="angle" class="in" min="0" max="360" value="0">
+      <div></div>
+
+      <span> $K$  </span>
+      <input type="number" style="position:absolute; left:40pt;" id="control_K" class="in" min="1" max="9000" value="30">
+
+
+      <div></div>
+      <input type="button" class="buto" style="position:absolute; left:20pt;" id="button1" value="change" onclick="change_button()">
+
+
+    </div>
+
+    <canvas id="canvas_p" style="position:absolute; left:40%; top:4%"></canvas>
+
+  </body>
+
+
+  <script type="text/javascript" src="physics.js"></script>
+
+</html>
