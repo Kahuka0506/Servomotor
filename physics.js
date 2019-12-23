@@ -24,6 +24,7 @@ let p_r = canvas_h/7;
 let theta = 0;
 let servo = theta+80;
 let angleRad = 0;
+let theta_show_tex = servo;
 
 let K = 500;
 let J = 10;
@@ -37,14 +38,15 @@ let stop = 0;
 
 function diff_eq(){
   M = (theta - x1)*K*J;
-  let xxx = angleRad;
   x1 += dh*x2;
   x2 += (M/I*dh-c/J*x2);
   angleRad = Math.PI/180*x1;
-  if(Math.abs(angleRad-xxx) < 0.0000001) stop++;
-  else stop = 0;
 
-  if(stop > 1000) window.cancelAnimationFrame(loop);
+  if(Math.abs(x1-theta) < 0.01) stop++;
+  else stop = 0;
+  theta_show_tex = x1;
+  document.getElementById('theta_show').innerHTML = theta_show_tex.toFixed(3) ;
+
 }
 
 
@@ -54,8 +56,6 @@ function defalt_conroll(){
   angleRad = Math.PI/ 180*servo;
 
 }
-
-
 
 
 
@@ -111,7 +111,11 @@ function loop(timestamp) {
   ctx.arc(p_x, p_y, 3*p_r, 0, 2*Math.PI);
   ctx.stroke();
 
-  window.requestAnimationFrame(loop);
+  if(stop > 100){
+    stop = 0;
+    window.cancelAnimationFrame(loop);
+  }
+  else window.requestAnimationFrame(loop);
 }
 
 
