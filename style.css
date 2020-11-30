@@ -15,31 +15,57 @@ canvas {
 
 }
 
-.theta_K_size{
+.top_equation{
+    color: #24226c;
+    font-size: 35pt;
+}
+
+.theta_theta_size{
  color: #24226c;
   font-size: 30pt;
 }
 
+
+.theta_data_size{
+    color: #24226c;
+    font-size: 30pt;
+    
+}
+
+
 .in{
 border:0;
-padding:8px;
-font-size:0.6em;
+padding:2pt;
+font-size:20pt;
 font-family:Arial, sans-serif;
 color:#95ade9;
 border:solid 1px #87bef0;
 margin:0 0 20px;
-width:100px;
-
+width:100pt;
+height:30pt;
 }
 
-.buto{
-border:solid 1px #ffffff;
-padding:8px 20px;
-margin:0 0 20px;
-font-family:Arial, sans-serif;
-font-size:0.9em;
-text-transform:uppercase;
-font-weight:bold;
-color:#0a376c;
-cursor:pointer;
+
+
+.buto {
+  min-width: 100px;
+  font-family:Arial, sans-serif;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 20pt;
+  cursor: pointer;
 }
+ 
+.buto:hover {
+  background: #1d49aa;
+}
+ 
+.buto:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
